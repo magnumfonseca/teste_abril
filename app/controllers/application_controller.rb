@@ -1,5 +1,11 @@
 class ApplicationController < ActionController::Base
-  # Prevent CSRF attacks by raising an exception.
-  # For APIs, you may want to use :null_session instead.
-  protect_from_forgery with: :exception
+#  protect_from_forgery with: :exception
+  @@tasks =[]
+  def render_bad_request
+    payload = {
+      error: "mandatory parameter Not Set",
+      status: 400
+    }
+    render :json => payload, :status => :bad_request
+  end
 end

@@ -1,0 +1,15 @@
+<form ng-submit="saveTask()">
+	<div id="task" class = "form-group">
+		<label> Tarefa </label>
+		<input type="text" name="task" paceholder="tarefa de exemplo com 10 minutos" ng-model="task">
+	</div>
+	<button type="submit" class="btn btn-success btn-lg btn-block">
+		<span class="glyphicon glyphicon-flash"></span> Adicionar
+	</button>
+
+	<ul>
+		<li ng-repeat="task in tasks">
+		{{task}}
+		</li>
+	</ul>
+</form>

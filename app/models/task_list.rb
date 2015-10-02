@@ -1,0 +1,2 @@
+class TaskList < Array
+end
